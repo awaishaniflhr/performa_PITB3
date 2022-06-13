@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Performa_PITB</string>
+    <string name="select">Division</string>
+    <string name="fill_the_fields_below">Fill the fields below</string>
+    <string name="staric">*</string>
+    <string name="division">Division</string>
+    <string name="select_">Select</string>
+    <string name="district">District</string>
+    <string name="tehsil">Tehsil</string>
+    <string name="date">Date</string>
+    <string name="dpcc_meeting_attended">DPCC Meeting Attended</string>
+    <string name="_13_06_2022">13 / 06 / 2022</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="spot_price_checking">Spot Price Checking</string>
+    <string name="rate_list_displayed">Rate List Displayed</string>
+    <string name="lahore">Lahore</string>
+    <string name="enter_market_name">Enter Market Name</string>
+    <string name="market_name">Market Name</string>
+</resources>
