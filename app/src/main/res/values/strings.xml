@@ -17,4 +17,13 @@
     <string name="lahore">Lahore</string>
     <string name="enter_market_name">Enter Market Name</string>
     <string name="market_name">Market Name</string>
+    <string name="commodities_details">Commodities Details</string>
+    <string name="sr">Sr</string>
+    <string name="commodities">Commodities</string>
+    <string name="avail">Avail</string>
+    <string name="na">Na</string>
+    <string name="notified_retail_rate">Notified Retail Rate</string>
+    <string name="spot_price">Spot Price</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="picture_uploaded">Picture Uploaded</string>
 </resources>
