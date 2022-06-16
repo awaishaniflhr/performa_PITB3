@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recycler_view = findViewById(R.id.recycler_view);
-        setRecyclerview();
+//        recycler_view = findViewById(R.id.recycler_view);
+//        setRecyclerview();
     }
 
     private void setRecyclerview() {

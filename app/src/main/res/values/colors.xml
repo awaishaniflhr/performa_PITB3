@@ -9,6 +9,8 @@
     <color name="gry">#3b3b3b</color>
     <color name="dark_gray">#3e3e3e</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="green">#4db32b</color>#e2e2e2
-    <color name="light_gray">#e2e2e2</color>#e2e2e2
+    <color name="green">#4db32b</color>
+    <color name="light_gray">#e2e2e2</color>
+    <color name="light_green">#aed1a2</color>
+    <color name="gry_text">#474747</color>
 </resources>
