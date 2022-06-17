@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1,2,3,4,5,6">
+
+    <TableRow
+        android:background="@drawable/cell_shape"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/light_gray"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:layout_column="1"
+            android:id="@+id/sr_pf"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@drawable/cell_shape"
+            android:text="@string/sr"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:layout_column="2"
+            android:id="@+id/commodities_pf"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@drawable/cell_shape"
+            android:text="@string/commodities"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:layout_column="3"
+            android:id="@+id/avail_pf"
+            android:gravity="center"
+            android:background="@drawable/cell_shape"
+            android:padding="8dp"
+            android:text="@string/avail"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:layout_column="4"
+            android:gravity="center"
+            android:id="@+id/na_pf"
+            android:background="@drawable/cell_shape"
+            android:padding="8dp"
+            android:text="@string/na"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:layout_column="5"
+            android:gravity="center"
+            android:background="@drawable/cell_shape"
+            android:id="@+id/nrr_pf"
+            android:padding="8dp"
+            android:text="@string/notified_retail_rate2"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_column="6"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@drawable/cell_shape"
+            android:id="@+id/sprice_pf"
+            android:text="@string/spot_price2"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+    </TableRow>
+</TableLayout>
