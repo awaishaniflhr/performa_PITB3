@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                                     date.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
 
                                 }
-                            }, mYear, mMonth, mDay);
+                            }, mDay, mMonth, mYear);
                     datePickerDialog.show();
                 }
             });

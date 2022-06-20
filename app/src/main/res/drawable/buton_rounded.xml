@@ -8,7 +8,7 @@
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
         android:paddingLeft="30dp"
-        android:background="@color/dark_gray"/>
+        android:background="#4db32b"/>
     <solid android:color="#3e3e3e"/>
 
 </shape>

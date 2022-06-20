@@ -147,8 +147,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/corner_edittext"
-                    android:spinnerMode="dropdown"
-                    android:padding="20dp" />
+                    android:padding="20dp"
+                    android:spinnerMode="dropdown" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -184,7 +184,6 @@
                 android:background="@drawable/corner_edittext"
                 android:hint="@string/_13_06_2022"
                 android:inputType="date"
-                android:maxLength="10"
                 android:padding="20dp" />
         </LinearLayout>
 
@@ -540,8 +539,11 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:hint="100"
+                        android:textColor="@color/light_green"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -551,6 +553,9 @@
                         android:background="@drawable/cell_shape_item"
                         android:gravity="center"
                         android:padding="10dp"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textColor="@color/light_green"
                         android:hint="100"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
@@ -635,8 +640,11 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:hint="900"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
+                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -646,7 +654,10 @@
                         android:background="@drawable/cell_shape_item"
                         android:gravity="center"
                         android:padding="10dp"
+                        android:textColor="@color/light_green"
                         android:hint="900"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
                         android:textSize="14sp"
@@ -733,6 +744,9 @@
                         android:hint="7010"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -742,7 +756,10 @@
                         android:background="@drawable/cell_shape_item"
                         android:gravity="center"
                         android:padding="10dp"
+                        android:textColor="@color/light_green"
                         android:hint="7010"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
                         android:textSize="14sp"
@@ -826,9 +843,12 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:hint="900"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
                         android:textSize="14sp"
+                        android:textColor="@color/light_green"
                         android:textStyle="bold" />
 
                     <EditText
@@ -837,6 +857,9 @@
                         android:background="@drawable/cell_shape_item"
                         android:gravity="center"
                         android:padding="10dp"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textColor="@color/light_green"
                         android:hint="900"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
@@ -924,8 +947,11 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:hint="7010"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
+                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -935,7 +961,10 @@
                         android:background="@drawable/cell_shape_item"
                         android:gravity="center"
                         android:padding="10dp"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:hint="7010"
+                        android:textColor="@color/light_green"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
                         android:textSize="14sp"
@@ -1020,6 +1049,9 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:hint="600"
+                        android:textColor="@color/light_green"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
                         android:textSize="14sp"
@@ -1031,7 +1063,10 @@
                         android:background="@drawable/cell_shape_item"
                         android:gravity="center"
                         android:padding="10dp"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:hint="600"
+                        android:textColor="@color/light_green"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
                         android:textSize="14sp"
@@ -1117,6 +1152,9 @@
                         android:hint="7010"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -1127,6 +1165,9 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:hint="7010"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textColor="@color/light_green"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
                         android:textSize="14sp"
@@ -1210,8 +1251,11 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:hint="900"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
+                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -1222,6 +1266,9 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:hint="900"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textColor="@color/light_green"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
                         android:textSize="14sp"
@@ -1305,8 +1352,11 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:hint="7010"
+                        android:inputType="number"
+                        android:maxLength="4"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
+                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -1316,7 +1366,10 @@
                         android:background="@drawable/cell_shape_item"
                         android:gravity="center"
                         android:padding="10dp"
+                        android:inputType="number"
                         android:hint="7010"
+                        android:maxLength="4"
+                        android:textColor="@color/light_green"
                         android:textColorHint="@color/light_green"
                         android:textAlignment="center"
                         android:textSize="14sp"
@@ -1392,6 +1445,57 @@
 
 
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/remarks_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upload_img"
+            android:layout_marginTop="30dp"
+            android:text="Remarks"
+            android:textColor="@color/gry"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/remarks_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remarks_txt"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/remarks_corner_edittext"
+            android:hint="@string/enter_remarks"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="60dp"
+            android:textColor="#696564"
+            android:textColorHint="#696564" />
+        <Button
+            android:id="@+id/btn_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remarks_detail"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/buton_rounded"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="@string/upload_image"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+        <TextView
+            android:id="@+id/PITB_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_remarks"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Powered by PITB"
+            android:textColor="@color/gry"
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
 
     </RelativeLayout>

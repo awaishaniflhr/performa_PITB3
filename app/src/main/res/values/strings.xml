@@ -52,6 +52,7 @@
     <string name="please_upload_image">Please Upload Image</string>
     <string name="chicken">Chicken</string>
     <string name="date_txt">date_txt</string>
+    <string name="enter_remarks">Enter Remarks</string>
 
 
     <string-array name="division_array">
