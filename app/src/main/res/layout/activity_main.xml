@@ -7,9 +7,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="15dp"
         tools:context=".MainActivity">
+
+<!-- Start here-->
+<!-- End here-->
 
         <TextView
             android:id="@+id/textView"
@@ -72,9 +75,9 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignRight="@id/classSpinner"
+                    android:layout_alignEnd="@id/classSpinner"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="12dp"
+                    android:layout_marginEnd="12dp"
                     android:background="@drawable/ic_baseline_arrow_drop_down_24" />
             </RelativeLayout>
         </LinearLayout>
@@ -100,16 +103,18 @@
                 android:layout_marginTop="8dp">
 
                 <Spinner
-                    android:id="@id/classSpinner"
+                    android:id="@+id/classSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/corner_edittext"
-                    android:padding="20dp" />
+                    android:padding="20dp"
+                    android:spinnerMode="dropdown"
+                    tools:ignore="DuplicateIds" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignRight="@id/classSpinner"
+                    android:layout_alignEnd="@id/classSpinner"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="12dp"
                     android:background="@drawable/ic_baseline_arrow_drop_down_24" />
@@ -142,6 +147,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/corner_edittext"
+                    android:spinnerMode="dropdown"
                     android:padding="20dp" />
 
                 <ImageView
@@ -155,7 +161,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/date"
+            android:id="@+id/date_wrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/Tehsil"
@@ -171,7 +177,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/date2"
+                android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -186,7 +192,7 @@
             android:id="@+id/Dpcc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/date"
+            android:layout_below="@+id/date_wrapper"
             android:layout_marginTop="21dp">
 
             <TextView
@@ -491,61 +497,71 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="3"
-                        android:padding="10dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:background="@drawable/ic_baseline_close_24"
-                        android:gravity="center" />
 
-                    <TextView
-                        android:id="@+id/na"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="4"
-                        android:layout_weight="1"
-                        android:background="@drawable/ic_baseline_check_24"
-                        android:gravity="center"
-                        android:textColor="@color/white"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
 
-                    <TextView
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
+
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_column="5"
-                        android:layout_weight="1"
                         android:background="@drawable/cell_shape_item"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="@string/_100"
+                        android:hint="100"
+                        android:textColorHint="@color/light_green"
                         android:textAlignment="center"
-                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_column="6"
-                        android:padding="10dp"
-                        android:layout_gravity="center_vertical"
                         android:background="@drawable/cell_shape_item"
-                        android:layout_weight="1"
                         android:gravity="center"
-                        android:text="@string/_100"
+                        android:padding="10dp"
+                        android:hint="100"
+                        android:textColorHint="@color/light_green"
                         android:textAlignment="center"
-                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
                 </TableRow>
                 <TableRow
-                    android:background="@color/light_gray"
+
                     android:id="@+id/values_2"
+                    android:background="@drawable/cell_shape_item"
                     android:weightSum="6">
 
                     <TextView
@@ -576,54 +592,63 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/avail"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="3"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:padding="10dp"
-                        android:background="@drawable/ic_baseline_check_24"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/na"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="4"
-                        android:layout_weight="1"
-                        android:padding="10dp"
-                        android:background="@drawable/ic_baseline_close_24"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/nrr"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="5"
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/cell_shape_item"
-                        android:layout_weight="1"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
+
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
+
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="@string/_900"
+                        android:hint="900"
+                        android:textColorHint="@color/light_green"
                         android:textAlignment="center"
-                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_column="6"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
                         android:background="@drawable/cell_shape_item"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="@string/_900"
+                        android:hint="900"
+                        android:textColorHint="@color/light_green"
                         android:textAlignment="center"
-                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -632,7 +657,8 @@
                 <TableRow
                     android:background="@color/light_gray"
                     android:id="@+id/values_3"
-                    android:weightSum="6">
+                    android:weightSum="6"
+                    tools:ignore="DuplicateIds">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -662,49 +688,63 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/avail"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="3"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:background="@drawable/ic_baseline_check_24"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="4"
-                        android:padding="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/ic_baseline_close_24"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="5"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/_7010"
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
+
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
+
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="7010"
+                        android:textColorHint="@color/light_green"
                         android:textAlignment="center"
-                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_column="6"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/_7010"
                         android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="7010"
+                        android:textColorHint="@color/light_green"
                         android:textAlignment="center"
-                        android:textColor="@color/light_green"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -743,55 +783,69 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="3"
-                        android:padding="10dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:background="@drawable/ic_baseline_check_24"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="4"
-                        android:layout_weight="1"
-                        android:padding="10dp"
-                        android:background="@drawable/ic_baseline_close_24"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_column="5"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/_900"
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/cell_shape_item"
-                        android:textAlignment="center"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
+
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
+
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
                         android:padding="10dp"
-                        android:textColor="@color/light_green"
+                        android:hint="900"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_column="6"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/_900"
                         android:background="@drawable/cell_shape_item"
-                        android:textAlignment="center"
+                        android:gravity="center"
                         android:padding="10dp"
-                        android:textColor="@color/light_green"
+                        android:hint="900"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                </TableRow>                <TableRow
+                </TableRow>
+
+                <TableRow
                 android:background="@color/light_gray"
                 android:id="@+id/values_5"
                 android:weightSum="6">
@@ -824,58 +878,72 @@
                     android:textAlignment="viewStart"
                     android:textColor="@color/black"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
 
-                <TextView
-                    android:id="@+id/avail"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="3"
-                    android:layout_gravity="center_vertical"
-                    android:padding="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_baseline_close_24"
-                    android:gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="4"
-                    android:layout_weight="1"
-                    android:padding="10dp"
-                    android:background="@drawable/ic_baseline_check_24"
-                    android:gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="5"
-                    android:layout_weight="1"
-                    android:gravity="center"
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_shape_item"
-                    android:text="@string/_7010"
-                    android:padding="10dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/light_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:onClick="animate"
+                    tools:context=".MainActivity">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="6"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="10dp"
+                    <ImageView
+                        android:id="@+id/tick_cross"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tick"
+                        tools:ignore="DuplicateIds" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_shape_item"
-                    android:text="@string/_7010"
-                    android:textAlignment="center"
-                    android:textColor="@color/light_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:onClick="animate"
+                    tools:context=".MainActivity">
 
-            </TableRow>                <TableRow
+                    <ImageView
+                        android:id="@+id/tick_cross"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tick"
+                        tools:ignore="DuplicateIds" />
+
+                </FrameLayout>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="7010"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="7010"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+            </TableRow>
+
+                <TableRow
                 android:background="@color/light_gray"
                 android:id="@+id/values_3"
                 android:weightSum="6">
@@ -909,55 +977,69 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="3"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:padding="10dp"
-                    android:background="@drawable/ic_baseline_close_24"
-                    android:gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="4"
-                    android:layout_weight="1"
-                    android:padding="10dp"
-                    android:background="@drawable/ic_baseline_check_24"
-                    android:gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_shape_item"
-                    android:layout_column="5"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/_600"
-                    android:padding="10dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/light_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:onClick="animate"
+                    tools:context=".MainActivity">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    <ImageView
+                        android:id="@+id/tick_cross"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tick"
+                        tools:ignore="DuplicateIds" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_shape_item"
-                    android:layout_column="6"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="@string/_600"
-                    android:textAlignment="center"
-                    android:textColor="@color/light_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:onClick="animate"
+                    tools:context=".MainActivity">
 
-            </TableRow>                <TableRow
+                    <ImageView
+                        android:id="@+id/tick_cross"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tick"
+                        tools:ignore="DuplicateIds" />
+
+                </FrameLayout>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="600"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="600"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+            </TableRow>
+
+                <TableRow
                 android:background="@color/light_gray"
                 android:id="@+id/values_3"
                 android:weightSum="6">
@@ -990,55 +1072,69 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="3"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:padding="10dp"
-                    android:background="@drawable/ic_baseline_check_24"
-                    android:gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="4"
-                    android:layout_weight="1"
-                    android:padding="10dp"
-                    android:background="@drawable/ic_baseline_close_24"
-                    android:gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="5"
-                    android:layout_weight="1"
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/cell_shape_item"
-                    android:gravity="center"
-                    android:text="@string/_7010"
-                    android:padding="10dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/light_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:onClick="animate"
+                    tools:context=".MainActivity">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="6"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_shape_item"
-                    android:gravity="center"
-                    android:text="@string/_7010"
-                    android:textAlignment="center"
-                    android:padding="10dp"
-                    android:textColor="@color/light_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/tick_cross"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tick"
+                        tools:ignore="DuplicateIds" />
 
-            </TableRow>                <TableRow
+                </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
+
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="7010"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="7010"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+            </TableRow>
+
+                <TableRow
                 android:background="@color/light_gray"
                 android:id="@+id/values_8"
                 android:weightSum="6">
@@ -1071,56 +1167,68 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/avail"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="3"
-                    android:padding="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_baseline_close_24"
-                    android:gravity="center" />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="4"
-                    android:layout_weight="1"
-                    android:padding="10dp"
-                    android:background="@drawable/ic_baseline_check_24"
-                    android:gravity="center" />
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/cell_shape_item"
-                    android:layout_column="5"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/_900"
-                    android:padding="10dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/light_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    </FrameLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="6"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/cell_shape_item"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/_900"
-                    android:padding="10dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/light_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
 
-            </TableRow>                <TableRow
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
+
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="900"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="900"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+            </TableRow>
+                <TableRow
                 android:background="@color/light_gray"
                 android:id="@+id/values_9"
                 android:weightSum="6">
@@ -1154,53 +1262,65 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="3"
-                    android:padding="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_baseline_check_24"
-                    android:gravity="center" />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="10dp"
-                    android:layout_column="4"
-                    android:layout_weight="1"
-                    android:background="@drawable/ic_baseline_close_24"
-                    android:gravity="center" />
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="5"
-                    android:layout_weight="1"
-                    android:background="@drawable/cell_shape_item"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="@string/_7010"
-                    android:textAlignment="center"
-                    android:textColor="@color/light_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    </FrameLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_column="6"
-                    android:padding="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/cell_shape_item"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/_7010"
-                    android:textAlignment="center"
-                    android:textColor="@color/light_green"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape_item"
+                        android:onClick="animate"
+                        tools:context=".MainActivity">
+
+                        <ImageView
+                            android:id="@+id/tick_cross"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tick"
+                            tools:ignore="DuplicateIds" />
+
+                    </FrameLayout>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="7010"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_item"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:hint="7010"
+                        android:textColorHint="@color/light_green"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
             </TableRow>
 

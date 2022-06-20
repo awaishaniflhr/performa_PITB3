@@ -4,17 +4,23 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14" />
+        <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/avd_cross_to_tick.xml" value="0.108" />
+        <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/avd_tick_to_cross.xml" value="0.108" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/buton_rounded.xml" value="0.14" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/cell_shape.xml" value="0.1515" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/cell_shape_item.xml" value="0.1515" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/corner_edittext.xml" value="0.1" />
+        <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.108" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.1515" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.1515" />
+        <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/ic_cross.xml" value="0.108" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14" />
+        <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/ic_tick.xml" value="0.108" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/list_shape.xml" value="0.1515" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/table_cornerradius.xml" value="0.1575" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/table_radius.xml" value="0.1515" />
-        <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/layout/activity_main.xml" value="0.32104832104832104" />
+        <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/drawable/tick_cross.xml" value="0.108" />
+        <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/layout/corner.xml" value="0.12894736842105264" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/layout/edittext_corner.xml" value="0.1" />
         <entry key="..\:/Users/92301/AndroidStudioProjects/Performa_PITB/app/src/main/res/layout/item_layout.xml" value="0.25" />

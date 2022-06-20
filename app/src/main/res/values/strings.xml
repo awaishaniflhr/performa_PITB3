@@ -49,6 +49,25 @@
     <string name="_100">100</string>
     <string name="onion">Onion</string>
     <string name="floor_atta">Floor (Atta)</string>
-    <string name="chicken">Chicken</string>
     <string name="please_upload_image">Please Upload Image</string>
+    <string name="chicken">Chicken</string>
+    <string name="date_txt">date_txt</string>
+
+
+    <string-array name="division_array">
+        <item>Select</item>
+        <item>Division 1</item>
+        <item>Division 2</item>
+        <item>Division 3</item>
+        <item>Division 4</item>
+    </string-array>
+
+    <string-array name="district_array">
+        <item>Select</item>
+        <item>District 1</item>
+        <item>District 2</item>
+        <item>District 3</item>
+        <item>District 4</item>
+    </string-array>
+
 </resources>
